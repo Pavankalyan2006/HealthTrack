@@ -1,0 +1,93 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 180 20% 99%;
+    --foreground: 180 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 180 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 10% 10%;
+
+    --primary: 174 100% 29%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 50% 95%;
+    --secondary-foreground: 200 10% 20%;
+
+    --muted: 180 10% 94%;
+    --muted-foreground: 180 5% 40%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 180 10% 88%;
+    --input: 180 10% 88%;
+    --ring: 174 100% 29%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 180 10% 10%;
+    --foreground: 180 10% 98%;
+
+    --card: 180 10% 15%;
+    --card-foreground: 180 10% 98%;
+
+    --popover: 180 10% 15%;
+    --popover-foreground: 180 10% 98%;
+
+    --primary: 174 100% 29%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 5% 20%;
+    --secondary-foreground: 180 5% 90%;
+
+    --muted: 180 5% 20%;
+    --muted-foreground: 180 5% 65%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 180 10% 25%;
+    --input: 180 10% 25%;
+    --ring: 174 100% 29%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .health-card {
+    @apply bg-card text-card-foreground p-6 rounded-2xl shadow-sm border border-border transition-all hover:shadow-md;
+  }
+  
+  .page-container {
+    @apply container max-w-6xl mx-auto p-4 sm:p-6 py-8;
+  }
+
+  .page-title {
+    @apply text-3xl font-bold mb-6 text-foreground/90;
+  }
+}
